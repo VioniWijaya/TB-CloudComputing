@@ -9,17 +9,8 @@ app.use(cors()); // Mengizinkan Cross-Origin Resource Sharing
 app.use(express.json()); // Mem-parsing body request JSON
 
 // Penyimpanan data di memori (sesuai ketentuan tidak boleh menggunakan database) [cite: 8]
-let todos = [
-    {
-        "id": 1,
-        "title": "Contoh To-Do",
-        "description": "Ini adalah contoh to-do yang sudah ada.",
-        "completed": false,
-        "dueDate": "2025-07-01",
-        "createdAt": new Date().toISOString()
-    }
-];
-let currentId = 2;
+let todos = [];
+let currentId = 1;
 
 // Router untuk semua endpoint di bawah /api
 const router = express.Router();
